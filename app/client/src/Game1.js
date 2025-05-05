@@ -17,6 +17,10 @@ function Game1() {
         <p>{text[currentLanguage].game1.instructions}</p>
         <h1>{text[currentLanguage].gameHeaders.gameHeadersScoring}</h1>
         <p>{text[currentLanguage].game1.scoring}</p>
+        
+        <div className = "game1StartButton">
+          <button className="startButton" onClick={() => navigate('/game1/play')}>{text[currentLanguage].game1.play}</button>
+        </div>
 
         <div id="game1Area">
           
