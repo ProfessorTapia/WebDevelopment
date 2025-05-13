@@ -1,12 +1,20 @@
 import React from 'react';
 import './Game1.css';  
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useLanguage } from './LanguageContext'; 
 import text from './data.json';
 
 function Game1() {
   const navigate = useNavigate();
+  const location = useLocation();
   const { currentLanguage } = useLanguage(); 
+
+  const handlePlayClick = () => {
+    // Get current URL search parameters to preserve language setting
+    const params = new URLSearchParams(location.search);
+    // Navigate to the play route with the same parameters
+    navigate(`/game1/play?${params.toString()}`);
+  };
 
   return(
     <div className="game1Page">
@@ -19,7 +27,7 @@ function Game1() {
         <p>{text[currentLanguage].game1.scoring}</p>
         
         <div className = "game1StartButton">
-          <button className="startButton" onClick={() => navigate('/game1/play')}>{text[currentLanguage].game1.play}</button>
+          <button className="startButton" onClick={handlePlayClick}>{text[currentLanguage].game1.play}</button>
         </div>
 
         <div id="game1Area">

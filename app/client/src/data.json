@@ -32,7 +32,10 @@
             "instructions": "Words will fall from the top of the screen. Type the exact word as it appears and press “Enter” to eliminate it. The faster you type, the more words you can clear.",
             "scoring": "Earn points for every word you eliminate. Longer words give more points. The game ends if a word touches the ground. Try to beat your high score!",
             "changeLanguage": "Spanish",
-            "play": "Play"
+            "play": "Play",
+            "score": "Score",
+            "submit": "Submit",
+            "placeholder": "Type the word here..."
         },
 
         "game2": {
@@ -86,7 +89,10 @@
             "instructions": "Las palabras caerán desde la parte superior de la pantalla. Escriba la palabra exacta tal como aparece y presione “Entrar” para eliminarla. Cuanto más rápido escribas, más palabras podrás aclarar.",
             "scoring": "Gana puntos por cada palabra que elimines. Las palabras más largas dan más puntos. El juego termina si una palabra toca el suelo. ¡Intenta superar tu puntuación más alta!",
             "changeLanguage": "Inglés",
-            "play": "Jugar"
+            "play": "Jugar",
+            "score": "Puntuación",
+            "submit": "Enviar",
+            "placeholder": "Escribe la palabra aquí..."
         },
 
         "game2": {
