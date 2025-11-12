@@ -1,4 +1,4 @@
-import { translate } from "@vitalets/google-translate-api";
+const { translate } =  require("@vitalets/google-translate-api");
 
 /**
  * Translates text between English and Spanish using Google Translate.
@@ -11,7 +11,7 @@ import { translate } from "@vitalets/google-translate-api";
  * @returns {Promise<string>} The translated text.
  * @throws {Error} If input is invalid, translation fails, or rate limit is reached.
  */
-export async function translateText(text, to, from = "auto") {
+async function translateText(text, to, from = "auto") {
   if (typeof text !== "string" || !text.trim())
     throw new Error("Invalid input: 'text' must be a non-empty string");
 
@@ -34,3 +34,5 @@ export async function translateText(text, to, from = "auto") {
     );
   }
 }
+
+module.exports = { translateText };
