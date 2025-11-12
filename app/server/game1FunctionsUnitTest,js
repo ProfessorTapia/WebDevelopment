@@ -1,0 +1,46 @@
+const {getRandWords} = require("./game1Functions.js")
+const {getRandCategories} = require("./game1Functions.js")
+const {checkTranslation} = require("./game1Functions.js")
+const {checkWordInGroup} = require("./game1Functions.js")
+
+
+//getRandWords test
+console.log("getRandWords tests")
+console.log("specifying only the language")
+console.log(getRandWords("english"))
+console.log("specifying language and number")
+console.log(getRandWords("english", 3))
+console.log("specifying language number and category")
+console.log(getRandWords("english", 3, "animal"))
+
+console.log("")
+
+//getRandCategories test
+console.log("getRandCategories tests")
+console.log("specifying only the language")
+console.log(getRandCategories("english"))
+console.log("specifying language and number")
+console.log(getRandCategories("english", 3))
+
+console.log("")
+
+//checkTranslation test
+console.log("checkTranslation tests")
+console.log("specifying the language, original word, and translation with correct input")
+console.log(checkTranslation("english", "dog", "perro"))
+console.log("specifying the language, original word, and translation with incorrect input")
+console.log(checkTranslation("english", "dog", "gato"))
+console.log("specifying the language, original word, translation, and category with correct input")
+console.log(checkTranslation("english", "dog", "perro", "animal"))
+console.log("specifying the language, original word, translation, and category with incorrect input")
+console.log(checkTranslation("english", "dog", "gato", "animal"))
+
+console.log("")
+
+//checkWordInGroup test
+console.log("checkWordInGroup tests")
+console.log("specifying the language, word, and category with correct input")
+console.log(checkWordInGroup("english", "perro", "animal"))
+console.log("specifying the language, word, and category with incorrect input")
+console.log(checkWordInGroup("english", "[erro", "weather"))
+
