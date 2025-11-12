@@ -1,7 +1,7 @@
-const {getRandWords} = require("./game1Functions.js")
-const {getRandCategories} = require("./game1Functions.js")
-const {checkTranslation} = require("./game1Functions.js")
-const {checkWordInGroup} = require("./game1Functions.js")
+const {getRandWords} = require("../utils/game1Functions.js")
+const {getRandCategories} = require("../utils/game1Functions.js")
+const {checkTranslation} = require("../utils/game1Functions.js")
+const {checkWordInGroup} = require("../utils/game1Functions.js")
 
 
 //getRandWords test
