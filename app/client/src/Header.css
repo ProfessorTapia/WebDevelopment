@@ -5,16 +5,34 @@
   left: 30px;
   width: 200px; 
   height: 50px; 
+<<<<<<< Updated upstream
   background-color: #34DF48; 
+=======
+  background-color: #FFAF74; 
+>>>>>>> Stashed changes
   border-radius: 25px; 
   overflow: hidden; 
   cursor: pointer; 
   transition: background-color 0.3s ease;
   margin-bottom: 2rem; 
+<<<<<<< Updated upstream
+=======
+}
+
+.languageToggleSlider {
+  transition: transform 0.2s ease-out, background-color 0.25s ease;
+>>>>>>> Stashed changes
 }
 
 .languageToggleSlider:hover {
-  background-color: #FFAF74; 
+  transform: scale(1.12);
+}
+
+
+.leftGroup {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* space between logo and slider */
 }
 
 .slider-button {
@@ -72,30 +90,35 @@
 }
 
 
+/* NAV LIST bubbles */
 .navbarList {
   list-style: none;
   display: flex;
-  justify-content: right;
-  gap: 2rem;
-  padding: 0 20px;
-  margin: 0;
-  /* background-color:aliceblue; */
+  gap: 20px;
+  align-items: center;
 }
 
 .navbarList li a {
+  background: white;                 /* bubble color */
+  padding: 10px 18px;                /* bubble size */
+  border-radius: 999px;              /* FULLY ROUND bubble */
   text-decoration: none;
-  color: black;
-  font-weight: 500;
-  transition: color 0.3s;
-  font-family: Verdana;
-  font-size: 20px;
-  padding: 20px;
+  font-weight: 600;
+  color: #333;
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.15);
+  transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-
+/* Hover animation */
 .navbarList li a:hover {
-  color: #FFAF74; 
+  background-color: #FFAF74;         /* soft peach hover */
+  transform: scale(1.08);            /* grows on hover */
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
 }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 .navbar {
   background-color: #6DBA76;
   height: 100px;
