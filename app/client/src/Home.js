@@ -39,8 +39,7 @@ function Home() {
 
 
       <h1 className="homeTitle">{text[currentLanguage].home.homeTitle}</h1>
-      <p className="homeDescription">{text[currentLanguage].home.homeDescription}</p>
-      <p className="homeDescription">{text[currentLanguage].home.homeDescription2}</p>
+  
 
       <div className="gameSelection">
         <div
@@ -48,6 +47,7 @@ function Home() {
           onClick={() => navigate('/game1')}
         >
           <h2>{text[currentLanguage].home.game1}</h2>
+          <p1>{text[currentLanguage].home.game1_des}</p1>
           <p>{text[currentLanguage].home.click}</p>
         </div>
         <div
@@ -55,6 +55,8 @@ function Home() {
           onClick={() => navigate('/game2')}
         >
           <h2>{text[currentLanguage].home.game2}</h2>
+          <p1>{text[currentLanguage].home.game2_des}</p1>
+
           <p>{text[currentLanguage].home.click}</p>
         </div>
       </div>

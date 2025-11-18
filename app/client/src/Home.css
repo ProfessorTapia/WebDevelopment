@@ -1,12 +1,15 @@
 /* Home.css */
 .homePage {
-    max-width: 800px;
+    max-width: 1600px;
+    height: 715px;
     margin: auto;
     background-color: white;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(10, 63, 103, 0.1);
   }
+
+  
   .gameSelection {
     display: flex;
     justify-content: space-between;
@@ -33,16 +36,53 @@
   }
   
   .game1 {
-    background-color: #ACCD7B; 
-    color: white;
+  background-color: #6DBA76; 
+  background: url('./assets/istockphoto-1891623651-612x612.jpg') no-repeat center center;
+  background-size: cover;          /* ✅ Makes the image fill the box */
+  color: white;
+  font-family: Verdana;
+  border-radius: 12px;             /* Optional — keep consistent with .gameBox */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;                    /* Ensure it fills the game box */
+  width: 100%;
+  text-align: center;
+}
+
+
+  .game1, .game2 {
+    color: rgb(70, 55, 147);
     font-family: Verdana;
+    display: flex;              /* Enables flexbox */
+    justify-content: center;    /* Centers horizontally */
+    align-items: center;        /* Centers vertically */
+    flex-direction: column;     /* Keeps text stacked properly */
+    height: 550px;              /* Set a height for vertical centering */
+    text-align: center;         /* Center text inside */
+    border-radius: 10px;        /* Optional – makes it look nicer */
+    padding: 1rem;
   }
   
   .game2 {
     background-color: #459FDB; 
-    color: white;
+    color: rgb(70, 55, 147);
     font-family: Verdana;
+    background: url('./assets/istockphoto-1891623651-612x612.jpg') no-repeat center center;
+  background-size: cover;
   }
+
+  .game2 {
+    background-color: #459FDB; 
+    color: rgb(70, 55, 147);
+    font-family: Verdana;
+    background: url('./assets/istockphoto-1891623651-612x612.jpg') no-repeat center center;
+  background-size: cover;
+  }
+
+  
+  
 
   .homeTitle {
     color: #0E668B; 
@@ -52,13 +92,7 @@
     font-family: Verdana;
   }
   
-  .homeDescription {
-    color: #0E668B;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-    font-family: Verdana;
-  }
+  
   .languageToggleContainer {
     position: absolute;
     top: 20px;

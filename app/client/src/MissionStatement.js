@@ -1,4 +1,3 @@
-import React from 'react';
 import './MissionStatement.css';
 import ava from './assets/brunerHeadshot.jpg';
 import chelsea from './assets/calalbHeadshot.pdf';
@@ -7,11 +6,37 @@ import yoni from './assets/sabagHeadshot.webp';
 import riley from './assets/mcgintyHeadshot.jpg';
 import tad from './assets/salwanHeadshot.jpeg';
 import thomas from './assets/richardsonHeadshot.jpeg';
+import React, { useState, useEffect } from 'react';
+import './Home.css';
+import { useNavigate } from 'react-router-dom';
+import { useLanguage } from './LanguageContext'; 
+import text from './data.json';
 
 function MissionStatement() {
+
+    const navigate = useNavigate();
+  const { currentLanguage, toggleLanguage, setCurrentLanguage } = useLanguage(); 
+  const [showModal, setShowModal] = useState(true);
+
+  useEffect(() => {
+    // REMOVE this line completely for now:
+    // const hasSelectedLanguage = localStorage.getItem('languageSelected');
+  
+    setShowModal(true); // Force it to always show
+  }, []);
+
+
+
+  const handleLanguageSelect = (language) => {
+    setCurrentLanguage(language); 
+    setShowModal(false);
+    localStorage.setItem('languageSelected', 'true');
+  };
+
+
     return(
         <div className="missionStatementPage">
-            <h1>Mission Statement</h1>
+            <h1 className="MissionTitle">{text[currentLanguage].Mission.MissionTitle}</h1>
             <p>
             This webpage was made to make learning Spanish & English a fun experience for kids! Through these interactive games, kids and people of all ages can build their understanding of a language while having a good time. Our mission is to create a playful learning environment, while still encouraging curiosity and confidence in a new language. By intertwining education with entertainment, this project entices kids to explore bilingualism in a way that makes you feel like you’re playing, not work!
             </p>

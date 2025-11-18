@@ -1,22 +1,3 @@
-.header {
-  background-color: #FFAF74;
-  padding: 0rem 0rem;
-  text-align: center;
-}
-
-.headerTitle {
-  margin: 0;
-  font-size: 2rem;
-  color: black;
-  font-family: Verdana;
-}
-
-.navbar {
-  margin-top: 1rem;
-  background-color: #ACCD7B;
-  height: 100px
-}
-
 
 .languageToggleSlider {
   position: relative;
@@ -24,11 +5,12 @@
   left: 30px;
   width: 200px; 
   height: 50px; 
-  background-color: #669603; 
+  background-color: #34DF48; 
   border-radius: 25px; 
   overflow: hidden; 
   cursor: pointer; 
-  transition: background-color 0.3s ease; 
+  transition: background-color 0.3s ease;
+  margin-bottom: 2rem; 
 }
 
 .languageToggleSlider:hover {
@@ -114,3 +96,23 @@
 .navbarList li a:hover {
   color: #FFAF74; 
 }
+.navbar {
+  background-color: #6DBA76;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* keeps spacing even */
+  padding: 0 30px;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  height: 80px;
+  width: auto;
+  border-radius: 10px;
+}
+
