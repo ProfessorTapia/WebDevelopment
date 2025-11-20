@@ -48,7 +48,12 @@
 
         "Mission": { 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             "MissionTitle": "Mission Statement"
+=======
+            "MissionTitle": "Mission Statement",
+            "AD": "Adivisory"
+>>>>>>> Stashed changes
 =======
             "MissionTitle": "Mission Statement",
             "AD": "Adivisory"
