@@ -1,130 +1,93 @@
-{ 
-    "english" : {
-
-        "header": {
-            "headerTitle": "Welcome to LingoLeap!",
-            "title": "Welcome to LingoLeap!",
-            "home": "Home",
-            "game1": "Game 1",
-            "game2": "Game 2",
-            "missionStatement": "Mission Statement",
-            "changeLanguage": "Spanish"
-        },
-
-        "home": {
-            "homeTitle": "Welcome to LingoLeap!",
-            "game1": "Word Block",
-            "game1_des": "Prevent the falling words from reaching the ground by typing them before they land!",
-            "game2": "Wild Words",
-            "game2_des": "Enter words that fit the category to the left. When you are complete, select “Generate” and the program will generate a fun story with the words you gave it!",
-            "click": "Click here to play!"
-        },
-
-        "gameHeaders": {
-            "gameHeadersDescription": "Description",
-            "gameHeadersInstructions": "Instructions",
-            "gameHeadersScoring": "Scoring"
-        },
-
-        "game1": {
-            "name": "Word Block",
-            "description": "Prevent the falling words from reaching the ground by typing them before they land!",
-            "instructions": "Words will fall from the top of the screen. Type the exact word as it appears and press “Enter” to eliminate it. The faster you type, the more words you can clear.",
-            "scoring": "Earn points for every word you eliminate. Longer words give more points. The game ends if a word touches the ground. Try to beat your high score!",
-            "changeLanguage": "Spanish",
-            "play": "Play",
-            "score": "Score",
-            "submit": "Submit",
-            "placeholder": "Type the word here..."
-        },
-
-        "game2": {
-            "name": "Wild Words",
-            "description": "Enter words that fit the category to the left. When you are complete, select “Generate” and the program will generate a fun story with the words you gave it!",
-            "instructions": "For each category, type a word that fits the prompt.",
-            "changeLanguage": "Spanish"
-        },
-
-
-        "Mission": { 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-            "MissionTitle": "Mission Statement"
-=======
-            "MissionTitle": "Mission Statement",
-            "AD": "Adivisory"
->>>>>>> Stashed changes
-=======
-            "MissionTitle": "Mission Statement",
-            "AD": "Adivisory"
->>>>>>> Stashed changes
-=======
-            "MissionTitle": "Mission Statement",
-            "AD": "Adivisory"
->>>>>>> Stashed changes
-        }
-
-
-        
+{
+    "english": {
+      "header": {
+        "headerTitle": "Welcome to LingoLeap!",
+        "title": "Welcome to LingoLeap!",
+        "home": "Home",
+        "game1": "Game 1",
+        "game2": "Game 2",
+        "missionStatement": "Mission Statement",
+        "changeLanguage": "Spanish"
+      },
+      "home": {
+        "homeTitle": "Welcome to LingoLeap!",
+        "game1": "Word Block",
+        "game1_des": "Prevent the falling words from reaching the ground by typing them before they land!",
+        "game2": "Wild Words",
+        "game2_des": "Enter words that fit the category to the left. When you are complete, select “Generate” and the program will generate a fun story with the words you gave it!",
+        "click": "Click here to play!"
+      },
+      "gameHeaders": {
+        "gameHeadersDescription": "Description",
+        "gameHeadersInstructions": "Instructions",
+        "gameHeadersScoring": "Scoring"
+      },
+      "game1": {
+        "name": "Word Block",
+        "description": "Prevent the falling words from reaching the ground by typing them before they land!",
+        "instructions": "Words will fall from the top of the screen. Type the exact word as it appears and press “Enter” to eliminate it. The faster you type, the more words you can clear.",
+        "scoring": "Earn points for every word you eliminate. Longer words give more points. The game ends if a word touches the ground. Try to beat your high score!",
+        "changeLanguage": "Spanish",
+        "play": "Play",
+        "score": "Score",
+        "submit": "Submit",
+        "placeholder": "Type the word here..."
+      },
+      "game2": {
+        "name": "Wild Words",
+        "description": "Enter words that fit the category to the left. When you are complete, select “Generate” and the program will generate a fun story with the words you gave it!",
+        "instructions": "For each category, type a word that fits the prompt.",
+        "changeLanguage": "Spanish"
+      },
+      "Mission": {
+        "MissionTitle": "Mission Statement",
+        "missionDescription": "This website was created to make learning Spanish and English a fun experience for kids. Through these interactive games, children and people of all ages can build their understanding of a language while having fun."
+      }
     },
-
-    
-
-    "spanish" : {
-
-        "header" : {
-
-            "headerTitle": "¡Bienvenido a LingoLeap!",
-            "home": "Inicio",
-            "game1": "Juego 1",
-            "game2": "Juego 2",
-            "missionStatement": "Declaración de misión",
-            "changeLanguage": "Inglés"
-        },
-
-        "home" : {
-            "missionStatementText": "Esta página web fue creada para hacer que aprender español e inglés sea una experiencia divertida para los niños. A través de estos juegos interactivos, los niños y personas de todas las edades pueden construir su comprensión de un idioma mientras se divierten. Nuestra misión es crear un ambiente de aprendizaje lúdico, al mismo tiempo que fomentamos la curiosidad y la confianza en un nuevo idioma. Al entrelazar la educación con el entretenimiento, este proyecto invita a los niños a explorar el bilingüismo de una manera que te hace sentir como si estuvieras jugando, no trabajando.",
-            "homeTitle": "¡Bienvenido a LingoLeap!",
-            
-            "game1": "Bloque de Palabras",
-            "game2": "Palabras Salvajes",
-            "click": "¡Haz clic aquí para jugar!"
-        },
-
-        "gameHeaders": {
-            "gameHeadersDescription": "Descripción",
-            "gameHeadersInstructions": "Instrucciones",
-            "gameHeadersScoring": "Puntuación"
-        },
-
-        "game1": {
-            "name": "Bloque de Palabras",
-            "description": "¡Evita que las palabras que caen lleguen al suelo escribiéndolas antes de que caigan!",
-            "instructions": "Las palabras caerán desde la parte superior de la pantalla. Escriba la palabra exacta tal como aparece y presione “Entrar” para eliminarla. Cuanto más rápido escribas, más palabras podrás aclarar.",
-            "scoring": "Gana puntos por cada palabra que elimines. Las palabras más largas dan más puntos. El juego termina si una palabra toca el suelo. ¡Intenta superar tu puntuación más alta!",
-            "changeLanguage": "Inglés",
-            "play": "Jugar",
-            "score": "Puntuación",
-            "submit": "Enviar",
-            "placeholder": "Escribe la palabra aquí..."
-        },
-
-        "game2": {
-            "name": "Palabras Salvajes",
-            "description": "Introduzca las palabras que se ajusten a la categoría de la izquierda. Cuando hayas terminado, selecciona “Generar” y el programa generará una divertida historia con las palabras que le diste.",
-            "instructions": "Para cada categoría, escriba una palabra que se ajuste a la solicitud.",
-            "changeLanguage": "Inglés"
-        },
-
-
-        "Mission": { 
-            "MissionTitle": "Declaración de Misión",
-            "missionDescription": "Esta página web fue creada para hacer que aprender español e inglés sea una experiencia divertida para los niños. A través de estos juegos interactivos, los niños y personas de todas las edades pueden construir su comprensión de un idioma mientras se divierten.",
-            "missionDescription2": "Nuestra misión es crear un ambiente de aprendizaje lúdico, al mismo tiempo que fomentamos la curiosidad y la confianza en un nuevo idioma. Al entrelazar la educación con el entretenimiento, este proyecto invita a los niños a explorar el bilingüismo de una manera que te hace sentir como si estuvieras jugando, no trabajando.",
-            "AD": "Asesores"
-
-        }
+    "spanish": {
+      "header": {
+        "headerTitle": "¡Bienvenido a LingoLeap!",
+        "home": "Inicio",
+        "game1": "Juego 1",
+        "game2": "Juego 2",
+        "missionStatement": "Declaración de misión",
+        "changeLanguage": "Inglés"
+      },
+      "home": {
+        "missionStatementText": "Esta página web fue creada para hacer que aprender español e inglés sea una experiencia divertida para los niños. A través de estos juegos interactivos, los niños y personas de todas las edades pueden construir su comprensión de un idioma mientras se divierten. Nuestra misión es crear un ambiente de aprendizaje lúdico, al mismo tiempo que fomentamos la curiosidad y la confianza en un nuevo idioma. Al entrelazar la educación con el entretenimiento, este proyecto invita a los niños a explorar el bilingüismo de una manera que te hace sentir como si estuvieras jugando, no trabajando.",
+        "homeTitle": "¡Bienvenido a LingoLeap!",
+        "game1": "Bloque de Palabras",
+        "game2": "Palabras Salvajes",
+        "click": "¡Haz clic aquí para jugar!"
+      },
+      "gameHeaders": {
+        "gameHeadersDescription": "Descripción",
+        "gameHeadersInstructions": "Instrucciones",
+        "gameHeadersScoring": "Puntuación"
+      },
+      "game1": {
+        "name": "Bloque de Palabras",
+        "description": "¡Evita que las palabras que caen lleguen al suelo escribiéndolas antes de que caigan!",
+        "instructions": "Las palabras caerán desde la parte superior de la pantalla. Escriba la palabra exacta tal como aparece y presione “Entrar” para eliminarla. Cuanto más rápido escribas, más palabras podrás aclarar.",
+        "scoring": "Gana puntos por cada palabra que elimines. Las palabras más largas dan más puntos. El juego termina si una palabra toca el suelo. ¡Intenta superar tu puntuación más alta!",
+        "changeLanguage": "Inglés",
+        "play": "Jugar",
+        "score": "Puntuación",
+        "submit": "Enviar",
+        "placeholder": "Escribe la palabra aquí..."
+      },
+      "game2": {
+        "name": "Palabras Salvajes",
+        "description": "Introduzca las palabras que se ajusten a la categoría de la izquierda. Cuando hayas terminado, selecciona “Generar” y el programa generará una divertida historia con las palabras que le diste.",
+        "instructions": "Para cada categoría, escriba una palabra que se ajuste a la solicitud.",
+        "changeLanguage": "Inglés"
+      },
+      "Mission": {
+        "MissionTitle": "Declaración de Misión",
+        "missionDescription": "Esta página web fue creada para hacer que aprender español e inglés sea una experiencia divertida para los niños. A través de estos juegos interactivos, los niños y personas de todas las edades pueden construir su comprensión de un idioma mientras se divierten.",
+        "missionDescription2": "Nuestra misión es crear un ambiente de aprendizaje lúdico, al mismo tiempo que fomentamos la curiosidad y la confianza en un nuevo idioma. Al entrelazar la educación con el entretenimiento, este proyecto invita a los niños a explorar el bilingüismo de una manera que te hace sentir como si estuvieras jugando, no trabajando.",
+        "AD": "Asesores"
+      }
     }
-
-}
+  }
+  

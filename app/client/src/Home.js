@@ -40,19 +40,7 @@ function Home() {
 
 
       <h1 className="homeTitle">{text[currentLanguage].home.homeTitle}</h1>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  
-=======
 
->>>>>>> Stashed changes
-=======
-
->>>>>>> Stashed changes
-=======
-
->>>>>>> Stashed changes
 
       <div className="gameSelection">
         <div
@@ -60,19 +48,11 @@ function Home() {
           onClick={() => navigate('/game1')}
         >
           <h2>{text[currentLanguage].home.game1}</h2>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
           <p1>{text[currentLanguage].home.game1_des}</p1>
-=======
-          <h2>{text[currentLanguage].home.game1_des}</h2>
->>>>>>> Stashed changes
-=======
-          <h2>{text[currentLanguage].home.game1_des}</h2>
->>>>>>> Stashed changes
-=======
-          <h2>{text[currentLanguage].home.game1_des}</h2>
->>>>>>> Stashed changes
+
+
+
           <p>{text[currentLanguage].home.click}</p>
         </div>
         <div
@@ -80,19 +60,9 @@ function Home() {
           onClick={() => navigate('/game2')}
         >
           <h2>{text[currentLanguage].home.game2}</h2>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
           <p1>{text[currentLanguage].home.game2_des}</p1>
-=======
-          <h2>{text[currentLanguage].home.game2_des}</h2>
->>>>>>> Stashed changes
-=======
-          <h2>{text[currentLanguage].home.game2_des}</h2>
->>>>>>> Stashed changes
-=======
-          <h2>{text[currentLanguage].home.game2_des}</h2>
->>>>>>> Stashed changes
+
           <p>{text[currentLanguage].home.click}</p>
         </div>
       </div>
