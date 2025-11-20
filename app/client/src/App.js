@@ -9,6 +9,7 @@ import Footer from './Footer';
 import Home from './Home';
 import MissionStatement from './MissionStatement';
 import Game1 from './Game1'
+import Game1Play from './Game1Play'
 import Game2 from './Game2'
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
               <Route path="/" element={<Navigate to="/Home" replace />} />
               <Route path="/Home" element={<Home />} />
               <Route path="/Game1" element={<Game1 />} />
+              <Route path="/Game1/play" element={<Game1Play />} />
               <Route path="/Game2" element={<Game2 />} />
               <Route path="/MissionStatement" element={<MissionStatement />} />
             </Routes>
