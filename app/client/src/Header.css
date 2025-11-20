@@ -5,23 +5,16 @@
   left: 30px;
   width: 200px; 
   height: 50px; 
-<<<<<<< Updated upstream
-  background-color: #34DF48; 
-=======
   background-color: #FFAF74; 
->>>>>>> Stashed changes
   border-radius: 25px; 
   overflow: hidden; 
   cursor: pointer; 
   transition: background-color 0.3s ease;
   margin-bottom: 2rem; 
-<<<<<<< Updated upstream
-=======
 }
 
 .languageToggleSlider {
   transition: transform 0.2s ease-out, background-color 0.25s ease;
->>>>>>> Stashed changes
 }
 
 .languageToggleSlider:hover {
@@ -115,10 +108,6 @@
   transform: scale(1.08);            /* grows on hover */
   box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
 }
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 .navbar {
   background-color: #6DBA76;
   height: 100px;

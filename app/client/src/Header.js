@@ -20,37 +20,6 @@ function Header() {
   return (
     <div className="navbarContainer">
       <nav className="navbar">
-<<<<<<< Updated upstream
-        {/* ✅ Logo image on far left */}
-        <div className="logoContainer">
-          <img
-            src={bunnyLogo}
-            alt="Logo"
-            className="logoImage"
-          />
-        </div>
-
-        {/* ✅ Language toggle stays as before */}
-        <div
-          className={`languageToggleSlider ${
-            currentLanguage === 'spanish' ? 'active' : ''
-          }`}
-          onClick={toggleLanguage}
-        >
-          <div className="slider-button"></div>
-          <span className="label left">English</span>
-          <span className="label right">Español</span>
-        </div>
-
-        {/* ✅ Original nav links restored */}
-        <ul className="navbarList">
-          <li><Link to={createLink("/home")}>{text[currentLanguage].header.home}</Link></li>
-          <li><Link to={createLink("/game1")}>{text[currentLanguage].header.game1}</Link></li>
-          <li><Link to={createLink("/game2")}>{text[currentLanguage].header.game2}</Link></li>
-          <li><Link to={createLink("/MissionStatement")}>{text[currentLanguage].header.missionStatement}</Link></li>
-        </ul>
-      </nav>
-=======
 
 {/* ⭐ GROUP LOGO + SLIDER TOGETHER */}
 <div className="leftGroup">
@@ -79,7 +48,6 @@ function Header() {
 
 </nav>
 
->>>>>>> Stashed changes
     </div>
   );
 }
