@@ -58,7 +58,8 @@ function MissionStatement() {
                 </li>
                 <li>
                     <img src={yoni} alt="Yoni Sabag" className="missionStatementPhotos" />
-                    Yoni Sabag</li>
+                    <p><strong>Yoni Sabag</strong> is a senior Computer Science major at John Carroll University with experience in Game Development, Full-Stack Development, and Software Development. His technical expertise spans multiple programming languages including Python, C#, Java, JavaScript, and TypeScript, along with frameworks such as React, Node.js, and game engines like Unity and Godot.</p>
+                </li>
                 <li>
                     <img src={riley} alt="Riley McGinty" className="missionStatementPhotos" />
                     <p><strong>Riley McGinty</strong> is a second year Computer Science major, with a minor in Economics, at John Carroll University. He has expereince in programming
