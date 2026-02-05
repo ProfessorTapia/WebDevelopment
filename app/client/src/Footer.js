@@ -3,7 +3,7 @@ import './Footer.css';
 import jcu_logo from './assets/jcu_logo.png';
 
 // Social media icons (replace with your own image paths)
-import facebookIcon from '/assets/facebook.png';
+import facebookIcon from './assets/facebook.png';
 import linkedinIcon from './assets/linkedin.png';
 import tiktokIcon from './assets/tiktok.png';
 import xIcon from './assets/x.png';
