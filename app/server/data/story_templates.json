@@ -1,0 +1,87 @@
+[
+  {
+    "id": 1,
+    "categories": [
+      "animal",
+      "verb",
+      "food_and_drink",
+      "color",
+      "adjective",
+      "family",
+      "body_part",
+      "clothing",
+      "building",
+      "weather"
+    ],
+    "template_en": "One day, a {adjective} {color} {animal} decided to {verb}. It ran all the way to the {building} where my {family} was waiting. Along the way, it carried a {food_and_drink} in its {body_part}. Everyone laughed because of the {clothing} it wore. Suddenly, the {weather} changed, but the {animal} bravely continued its adventure.",
+    "template_es": "Un día, un {animal} {color} y {adjective} decidió {verb}. Corrió hasta el {building} donde mi {family} estaba esperando. En el camino, llevaba un {food_and_drink} en su {body_part}. Todos se rieron por la {clothing} que llevaba puesta. De repente, cambió el {weather}, pero el {animal} continuó valientemente su aventura."
+  },
+  {
+    "id": 2,
+    "categories": [
+      "animal",
+      "verb",
+      "food_and_drink",
+      "color",
+      "family",
+      "adjective",
+      "body_part",
+      "clothing",
+      "building",
+      "weather"
+    ],
+    "template_en": "In the {building}, a {color} {animal} was trying to {verb}. My {family} joined and brought a {food_and_drink}. Suddenly, the {adjective} {animal} tripped over a {body_part} of a nearby statue. Everyone noticed its {clothing} and started to cheer. The {weather} outside made the scene even more dramatic, but they all had fun.",
+    "template_es": "En el {building}, un {animal} {color} intentaba {verb}. Mi {family} se unió y trajo un {food_and_drink}. De repente, el {animal} {adjective} tropezó con un {body_part} de una estatua cercana. Todos notaron su {clothing} y empezaron a animar. El {weather} afuera hizo la escena aún más dramática, pero todos se divirtieron."
+  },
+  {
+    "id": 3,
+    "categories": [
+      "animal",
+      "verb",
+      "food_and_drink",
+      "color",
+      "family",
+      "adjective",
+      "body_part",
+      "clothing",
+      "building",
+      "weather"
+    ],
+    "template_en": "Yesterday, a {adjective} {animal} decided to {verb} near the {building}. My {family} watched while eating {food_and_drink}. The {color} {animal} jumped over a {body_part} in the garden. Its {clothing} was messy but funny. Suddenly, {weather} appeared, and everyone ran inside laughing.",
+    "template_es": "Ayer, un {animal} {adjective} decidió {verb} cerca del {building}. Mi {family} observaba mientras comía {food_and_drink}. El {animal} {color} saltó sobre un {body_part} en el jardín. Su {clothing} estaba desordenada pero divertida. De repente, apareció {weather} y todos corrieron adentro riendo."
+  },
+  {
+    "id": 4,
+    "categories": [
+      "animal",
+      "verb",
+      "food_and_drink",
+      "color",
+      "family",
+      "adjective",
+      "body_part",
+      "clothing",
+      "building",
+      "weather"
+    ],
+    "template_en": "A {color} {animal} loved to {verb} every morning in the {building}. My {family} joined and shared some {food_and_drink}. The {adjective} {animal} waved its {body_part} at everyone wearing {clothing}. The {weather} outside was perfect for their game. Finally, they all rested and talked about the {animal}'s adventure.",
+    "template_es": "Un {animal} {color} amaba {verb} cada mañana en el {building}. Mi {family} se unió y compartió un poco de {food_and_drink}. El {animal} {adjective} saludó con su {body_part} a todos mientras llevaba {clothing}. El {weather} afuera era perfecto para su juego. Finalmente, todos descansaron y hablaron sobre la aventura del {animal}."
+  },
+  {
+    "id": 5,
+    "categories": [
+      "animal",
+      "verb",
+      "food_and_drink",
+      "color",
+      "family",
+      "adjective",
+      "body_part",
+      "clothing",
+      "building",
+      "weather"
+    ],
+    "template_en": "During {weather}, a {adjective} {color} {animal} wanted to {verb}. It ran past the {building} where my {family} was eating {food_and_drink}. The {animal}'s {body_part} got stuck in a {clothing}. Everyone laughed and cheered. Afterward, they all went back inside, talking about the {animal}'s {adjective} adventure.",
+    "template_es": "Durante {weather}, un {animal} {adjective} y {color} quería {verb}. Corrío frente al {building} donde mi {family} comía {food_and_drink}. El {body_part} del {animal} se quedó atrapado en una {clothing}. Todos se rieron y animaron. Después, todos volvieron adentro, hablando sobre la aventura {adjective} del {animal}."
+  }
+]
