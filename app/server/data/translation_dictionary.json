@@ -1,330 +1,682 @@
 {
-    "english":{
-        "animal": {
-            "cat": ["gato"],
-            "dog": ["perro"],
-            "cow": ["vaca"],
-            "horse": ["caballo"],
-            "bird": ["pájaro"],
-            "fish": ["pez"],
-            "mouse": ["ratón"],
-            "rabbit": ["conejo"],
-            "pig": ["cerdo"],
-            "sheep": ["oveja"]
+    "animal": [
+        {
+            "id": "cat",
+            "en": ["cat"],
+            "es": ["gato"]
         },
-        "family": {
-            "mother": ["madre"],
-            "father": ["padre"],
-            "brother": ["hermano"],
-            "sister": ["hermana"],
-            "grandfather": ["abuelo"],
-            "grandmother": ["abuela"],
-            "uncle": ["tío"],
-            "aunt": ["tía"],
-            "son": ["hijo"],
-            "daughter": ["hija"]
+        {
+            "id": "dog",
+            "en": ["dog"],
+            "es": ["perro"]
         },
-        "weather": {
-            "sun": ["sol"],
-            "rain": ["lluvia"],
-            "snow": ["nieve"],
-            "wind": ["viento"],
-            "cloud": ["nube"],
-            "storm": ["tormenta"],
-            "lightning": ["rayo"],
-            "thunder": ["trueno"],
-            "rainbow": ["arcoíris"],
-            "sky": ["cielo"]
+        {
+            "id": "cow",
+            "en": ["cow"],
+            "es": ["vaca"]
         },
-        "building": {
-            "house": ["casa"],
-            "school": ["escuela"],
-            "church": ["iglesia"],
-            "hospital": ["hospital"],
-            "store": ["tienda"],
-            "shop": ["tienda"],
-            "bank": ["banco"],
-            "library": ["biblioteca"],
-            "castle": ["castillo"],
-            "movie theater": ["cine"],
-            "cinema": ["cine"],
-            "restaurant": ["restaurante"]
+        {
+            "id": "horse",
+            "en": ["horse"],
+            "es": ["caballo"]
         },
-        "furniture": {
-            "chair": ["silla"],
-            "table": ["mesa"],
-            "bed": ["cama"],
-            "sofa": ["sofá"],
-            "couch": ["sofá"],
-            "lamp": ["lámpara"],
-            "desk": ["escritorio"],
-            "rug": ["alfombra"],
-            "carpet": ["alfombra"],
-            "closet": ["armario"],
-            "wardrobe": ["armario"],
-            "mirror": ["espejo"],
-            "shelf": ["estante"]
+        {
+            "id": "bird",
+            "en": ["bird"],
+            "es": ["pájaro"]
         },
-        "clothing": {
-            "shirt": ["camisa"],
-            "pants": ["pantalones"],
-            "skirt": ["falda"],
-            "dress": ["vestido"],
-            "shoe": ["zapato"],
-            "hat": ["sombrero"],
-            "coat": ["abrigo"],
-            "socks": ["calcetines"],
-            "gloves": ["guantes"],
-            "scarf": ["bufanda"]
+        {
+            "id": "fish",
+            "en": ["fish"],
+            "es": ["pez"]
         },
-        "food_and_drink": {
-            "apple": ["manzana"],
-            "bread": ["pan"],
-            "milk": ["leche"],
-            "water": ["agua"],
-            "cheese": ["queso"],
-            "chicken": ["pollo"],
-            "fish": ["pescado"],
-            "rice": ["arroz"],
-            "egg": ["huevo"],
-            "juice": ["jugo"]
+        {
+            "id": "mouse",
+            "en": ["mouse"],
+            "es": ["ratón"]
         },
-        "body_part": {
-            "head": ["cabeza"],
-            "face": ["cara"],
-            "eye": ["ojo"],
-            "nose": ["nariz"],
-            "mouth": ["boca"],
-            "ear": ["oreja"],
-            "hand": ["mano"],
-            "arm": ["brazo"],
-            "leg": ["pierna"],
-            "foot": ["pie"]
+        {
+            "id": "rabbit",
+            "en": ["rabbit"],
+            "es": ["conejo"]
         },
-        "verb":{
-            "eat": ["comer"],
-            "drink": ["beber"],
-            "run": ["correr"],
-            "walk": ["caminar", "andar"],
-            "sleep": ["dormir"],
-            "play": ["jugar"],
-            "read": ["leer"],
-            "write": ["escribir"],
-            "see": ["ver"],
-            "hear": ["oír", "escuchar"],
-            "speak": ["hablar"],
-            "sing": ["cantar"],
-            "jump": ["saltar", "brincar"],
-            "swim": ["nadar"],
-            "laugh": ["reír"],
-            "cry": ["llorar"],
-            "open": ["abrir"],
-            "close": ["cerrar"],
-            "make": ["hacer"],
-            "go": ["ir"]
+        {
+            "id": "pig",
+            "en": ["pig"],
+            "es": ["cerdo"]
         },
-
-        "color":{
-            "red": ["rojo", "roja"],
-            "blue": ["azul"],
-            "green": ["verde"],
-            "yellow": ["amarillo", "amarilla"],
-            "black": ["negro", "negra"],
-            "white": ["blanco", "blanca"],
-            "orange": ["naranja"],
-            "purple": ["morado", "púrpura"],
-            "brown": ["marrón"],
-            "pink": ["rosa", "rosado", "rosada"]
-        },
-        "adjective":{
-            "big": ["grande"],
-            "small": ["pequeño", "pequeña"],
-            "happy": ["feliz"],
-            "content":[ "contento", "contenta"],
-            "sad": ["triste"],
-            "good": ["bueno", "buena"],
-            "bad": ["malo", "mala"],
-            "hot": ["caliente"],
-            "cold": ["frío", "fría"],
-            "new": ["nuevo", "nueva"],
-            "old": ["viejo", "vieja"]
-        },
-        "adverb":{
-            "quickly": ["rápidamente", "de prisa"],
-            "slowly": ["lentamente", "despacio"],
-            "well": ["bien"],
-            "badly": ["mal"],
-            "very": ["muy"],
-            "now": ["ahora"],
-            "yesterday": ["ayer"],
-            "tomorrow": ["mañana"],
-            "always": ["siempre"],
-            "never": ["nunca"]
+        {
+            "id": "sheep",
+            "en": ["sheep"],
+            "es": ["oveja"]
         }
-    },
-
-
-
-
-
-    
-    "spanish":{
-        "animales": {
-            "gato": ["cat"],
-            "perro": ["dog"],
-            "vaca": ["cow"],
-            "caballo": ["horse"],
-            "pájaro": ["bird"],
-            "pez": ["fish"],
-            "ratón": ["mouse"],
-            "conejo": ["rabbit"],
-            "cerdo": ["pig"],
-            "oveja": ["sheep"]
+    ],
+    "family": [
+         {
+            "id": "mother",
+            "en": ["mother", "mom"],
+            "es": ["madre"]
         },
-        "familia": {
-            "madre": ["mother", "mom"],
-            "padre": ["father", "dad"],
-            "hermano": ["brother"],
-            "hermana": ["sister"],
-            "abuelo": ["grandfather", "grandpa"],
-            "abuela": ["grandmother", "grandma"],
-            "tío": ["uncle"],
-            "tía": ["aunt"],
-            "hijo": ["son"],
-            "hija": ["daughter"]
+        {
+            "id": "father",
+            "en": ["father", "dad"],
+            "es": ["padre"]
         },
-        "clima": {
-            "sol": ["sun"],
-            "lluvia": ["rain"],
-            "nieve": ["snow"],
-            "viento": ["wind"],
-            "nube": ["cloud"],
-            "tormenta": ["storm"],
-            "rayo": ["lightning"],
-            "trueno": ["thunder"],
-            "arcoíris": ["rainbow"],
-            "cielo": ["sky"]
+        {
+            "id": "brother",
+            "en": ["brother"],
+            "es": ["hermano"]
         },
-        "edificios": {
-            "casa": ["house"],
-            "escuela": ["school"],
-            "iglesia": ["church"],
-            "hospital": ["hospital"],
-            "tienda": ["store", "shop"],
-            "banco": ["bank"],
-            "biblioteca": ["library"],
-            "castillo": ["castle"],
-            "cine": ["movie theater", "cinema"],
-            "restaurante": ["restaurant"]
+        {
+            "id": "sister",
+            "en": ["sister"],
+            "es": ["hermana"]
         },
-        "muebles": {
-            "silla": ["chair"],
-            "mesa": ["table"],
-            "cama": ["bed"],
-            "sofá": ["sofa", "couch"],
-            "lámpara": ["lamp"],
-            "escritorio": ["desk"],
-            "alfombra": ["rug", "carpet"],
-            "armario": ["closet", "wardrobe"],
-            "espejo": ["mirror"],
-            "estante": ["shelf"]
+        {
+            "id": "grandfather",
+            "en": ["grandfather", "grandpa"],
+            "es": ["abuelo"]
         },
-        "ropa": {
-            "camisa": ["shirt"],
-            "pantalones": ["pants"],
-            "falda": ["skirt"],
-            "vestido": ["dress"],
-            "zapato": ["shoe"],
-            "sombrero": ["hat"],
-            "abrigo": ["coat"],
-            "calcetines": ["socks"],
-            "guantes": ["gloves"],
-            "bufanda": ["scarf"]
+        {
+            "id": "grandmother",
+            "en": ["grandmother", "grandma"],
+            "es": ["abuela"]
         },
-        "comida_y_bebida": {
-            "manzana": ["apple"],
-            "pan": ["bread"],
-            "leche": ["milk"],
-            "agua": ["water"],
-            "queso": ["cheese"],
-            "pollo": ["chicken"],
-            "pescado": ["fish"],
-            "arroz": ["rice"],
-            "huevo": ["egg"],
-            "jugo": ["juice"]
+        {
+            "id": "uncle",
+            "en": ["uncle"],
+            "es": ["tío"]
         },
-        "partes_del_cuerpo": {
-            "cabeza": ["head"],
-            "cara": ["face"],
-            "ojo": ["eye"],
-            "nariz": ["nose"],
-            "boca": ["mouth"],
-            "oreja": ["ear"],
-            "mano": ["hand"],
-            "brazo": ["arm"],
-            "pierna": ["leg"],
-            "pie": ["foot"]
+        {
+            "id": "aunt",
+            "en": ["aunt"],
+            "es": ["tía"]
         },
-            "verbo": {
-            "comer": ["eat"],
-            "beber": ["drink"],
-            "correr": ["run"],
-            "caminar": ["walk"],
-            "dormir": ["sleep"],
-            "jugar": ["play"],
-            "leer": ["read"],
-            "escribir": ["write"],
-            "ver": ["see"],
-            "oír": ["hear", "listen"],
-            "hablar": ["speak", "talk"],
-            "cantar": ["sing"],
-            "saltar": ["jump", "hop"],
-            "nadar": ["swim"],
-            "reír": ["laugh"],
-            "llorar": ["cry"],
-            "abrir": ["open"],
-            "cerrar": ["close", "shut"],
-            "hacer": ["make", "do"],
-            "ir": ["go"]
+        {
+            "id": "son",
+            "en": ["son"],
+            "es": ["hijo"]
         },
-        "color": {
-            "rojo": ["red"],
-            "azul": ["blue"],
-            "verde": ["green"],
-            "amarillo": ["yellow"],
-            "negro": ["black"],
-            "blanco": ["white"],
-            "naranja": ["orange"],
-            "morado": ["purple"],
-            "marrón": ["brown"],
-            "rosa": ["pink"]
-        },
-        "adjetiva": {
-            "grande": ["big", "large"],
-            "pequeño": ["small", "little"],
-            "feliz": ["happy", "glad"],
-            "contento": ["content"],
-            "triste": ["sad", "unhappy"],
-            "bueno": ["good"],
-            "malo": ["bad"],
-            "caliente": ["hot"],
-            "frío": ["cold"],
-            "nuevo": ["new"],
-            "viejo": ["old"]
-        },
-        "adverbio": {
-            "rápidamente": ["quickly", "fast"],
-            "lentamente": ["slowly"],
-            "bien": ["well"],
-            "mal": ["badly", "poorly"],
-            "muy": ["very"],
-            "ahora": ["now"],
-            "ayer": ["yesterday"],
-            "mañana": ["tomorrow"],
-            "siempre": ["always"],
-            "nunca": ["never"]
+        {
+            "id": "daughter",
+            "en": ["daughter"],
+            "es": ["hija"]
         }
-    }
+    ],
+    "weather": [
+        {
+            "id": "sun",
+            "en": ["sun"],
+            "es": ["sol"]
+        },
+        {
+            "id": "rain",
+            "en": ["rain"],
+            "es": ["lluvia"]
+        },
+        {
+            "id": "snow",
+            "en": ["snow"],
+            "es": ["nieve"]
+        },
+        {
+            "id": "wind",
+            "en": ["wind"],
+            "es": ["viento"]
+        },
+        {
+            "id": "cloud",
+            "en": ["cloud"],
+            "es": ["nube"]
+        },
+        {
+            "id": "storm",
+            "en": ["storm"],
+            "es": ["tormenta"]
+        },
+        {
+            "id": "lightning",
+            "en": ["lightning"],
+            "es": ["rayo"]
+        },
+        {
+            "id": "thunder",
+            "en": ["thunder"],
+            "es": ["trueno"]
+        },
+        {
+            "id": "rainbow",
+            "en": ["rainbow"],
+            "es": ["arcoíris"]
+        },
+        {
+            "id": "sky",
+            "en": ["sky"],
+            "es": ["cielo"]
+        }
+    ],
+    "building": [
+        {
+            "id": "house",
+            "en": ["house"],
+            "es": ["casa"]
+        },
+        {
+            "id": "school",
+            "en": ["school"],
+            "es": ["escuela"]
+        },
+        {
+            "id": "church",
+            "en": ["church"],
+            "es": ["iglesia"]
+        },
+        {
+            "id": "hospital",
+            "en": ["hospital"],
+            "es": ["hospital"]
+        },
+        {
+            "id": "store",
+            "en": ["store", "shop"],
+            "es": ["tienda"]
+        },
+        {
+            "id": "bank",
+            "en": ["bank"],
+            "es": ["banco"]
+        },
+        {
+            "id": "library",
+            "en": ["library"],
+            "es": ["biblioteca"]
+        },
+        {
+            "id": "castle",
+            "en": ["castle"],
+            "es": ["castillo"]
+        },
+        {
+            "id": "movie theater",
+            "en": ["movie theater", "cinema"],
+            "es": ["cine"]
+        },
+        {
+            "id": "restaurant",
+            "en": ["restaurant"],
+            "es": ["restaurante"]
+        }
+    ],
+    "furniture": [
+         {
+            "id": "chair",
+            "en": ["chair"],
+            "es": ["silla"]
+        },
+        {
+            "id": "table",
+            "en": ["table"],
+            "es": ["mesa"]
+        },
+        {
+            "id": "bed",
+            "en": ["bed"],
+            "es": ["cama"]
+        },
+        {
+            "id": "sofa",
+            "en": ["sofa", "couch"],
+            "es": ["sofá"]
+        },
+        {
+            "id": "lamp",
+            "en": ["lamp"],
+            "es": ["lámpara"]
+        },
+        {
+            "id": "desk",
+            "en": ["desk"],
+            "es": ["escritorio"]
+        },
+        {
+            "id": "rug",
+            "en": ["rug", "carpet"],
+            "es": ["alfombra"]
+        },
+        {
+            "id": "closet",
+            "en": ["closet", "wardrobe"],
+            "es": ["armario"]
+        },
+        {
+            "id": "mirror",
+            "en": ["mirror"],
+            "es": ["espejo"]
+        },
+        {
+            "id": "shelf",
+            "en": ["shelf"],
+            "es": ["estante"]
+        }
+    ],
+    "clothing": [
+        {
+            "id": "shirt",
+            "en": ["shirt"],
+            "es": ["camisa"]
+        },
+        {
+            "id": "pants",
+            "en": ["pants"],
+            "es": ["pantalones"]
+        },
+        {
+            "id": "skirt",
+            "en": ["skirt"],
+            "es": ["falda"]
+        },
+        {
+            "id": "dress",
+            "en": ["dress"],
+            "es": ["vestido"]
+        },
+        {
+            "id": "shoe",
+            "en": ["shoe"],
+            "es": ["zapato"]
+        },
+        {
+            "id": "hat",
+            "en": ["hat"],
+            "es": ["sombrero"]
+        },
+        {
+            "id": "coat",
+            "en": ["coat"],
+            "es": ["abrigo"]
+        },
+        {
+            "id": "socks",
+            "en": ["socks"],
+            "es": ["calcetines"]
+        },
+        {
+            "id": "gloves",
+            "en": ["gloves"],
+            "es": ["guantes"]
+        },
+        {
+            "id": "scarf",
+            "en": ["scarf"],
+            "es": ["bufanda"]
+        }
+    ],
+    "food_and_drink": [
+        {
+            "id": "apple",
+            "en": ["apple"],
+            "es": ["manzana"]
+        },
+        {
+            "id": "bread",
+            "en": ["bread"],
+            "es": ["pan"]
+        },
+        {
+            "id": "milk",
+            "en": ["milk"],
+            "es": ["leche"]
+        },
+        {
+            "id": "water",
+            "en": ["water"],
+            "es": ["agua"]
+        },
+        {
+            "id": "cheese",
+            "en": ["cheese"],
+            "es": ["queso"]
+        },
+        {
+            "id": "chicken",
+            "en": ["chicken"],
+            "es": ["pollo"]
+        },
+        {
+            "id": "fish",
+            "en": ["fish"],
+            "es": ["pescado"]
+        },
+        {
+            "id": "rice",
+            "en": ["rice"],
+            "es": ["arroz"]
+        },
+        {
+            "id": "egg",
+            "en": ["egg"],
+            "es": ["huevo"]
+        },
+        {
+            "id": "juice",
+            "en": ["juice"],
+            "es": ["jugo"]
+        }
+    ],
+    "body_part": [
+        {
+            "id": "head",
+            "en": ["head"],
+            "es": ["cabeza"]
+        },
+        {
+            "id": "face",
+            "en": ["face"],
+            "es": ["cara"]
+        },
+        {
+            "id": "eye",
+            "en": ["eye"],
+            "es": ["ojo"]
+        },
+        {
+            "id": "nose",
+            "en": ["nose"],
+            "es": ["nariz"]
+        },
+        {
+            "id": "mouth",
+            "en": ["mouth"],
+            "es": ["boca"]
+        },
+        {
+            "id": "ear",
+            "en": ["ear"],
+            "es": ["oreja"]
+        },
+        {
+            "id": "hand",
+            "en": ["hand"],
+            "es": ["mano"]
+        },
+        {
+            "id": "arm",
+            "en": ["arm"],
+            "es": ["brazo"]
+        },
+        {
+            "id": "leg",
+            "en": ["leg"],
+            "es": ["pierna"]
+        },
+        {
+            "id": "foot",
+            "en": ["foot"],
+            "es": ["pie"]
+        }
+    ],
+    "verb":[
+        {
+            "id": "eat",
+            "en": ["eat"],
+            "es": ["comer"]
+        },
+        {
+            "id": "drink",
+            "en": ["drink"],
+            "es": ["beber"]
+        },
+        {
+            "id": "run",
+            "en": ["run"],
+            "es": ["correr"]
+        },
+        {
+            "id": "walk",
+            "en": ["walk"],
+            "es": ["caminar", "andar"]
+        },
+        {
+            "id": "sleep",
+            "en": ["sleep"],
+            "es": ["dormir"]
+        },
+        {
+            "id": "play",
+            "en": ["play"],
+            "es": ["jugar"]
+        },
+        {
+            "id": "read",
+            "en": ["read"],
+            "es": ["leer"]
+        },
+        {
+            "id": "write",
+            "en": ["write"],
+            "es": ["escribir"]
+        },
+        {
+            "id": "see",
+            "en": ["see"],
+            "es": ["ver"]
+        },
+        {
+            "id": "hear",
+            "en": ["hear", "listen"],
+            "es": ["oír", "escuchar"]
+        },
+        {
+            "id": "speak",
+            "en": ["speak", "talk"],
+            "es": ["hablar"]
+        },
+        {
+            "id": "sing",
+            "en": ["sing"],
+            "es": ["cantar"]
+        },
+        {
+            "id": "jump",
+            "en": ["jump", "hop"],
+            "es": ["saltar", "brincar"]
+        },
+        {
+            "id": "swim",
+            "en": ["swim"],
+            "es": ["nadar"]
+        },
+        {
+            "id": "laugh",
+            "en": ["laugh"],
+            "es": ["reír"]
+        },
+        {
+            "id": "cry",
+            "en": ["cry"],
+            "es": ["llorar"]
+        },
+        {
+            "id": "open",
+            "en": ["open"],
+            "es": ["abrir"]
+        },
+        {
+            "id": "close",
+           	"en":["close",	"shut"],
+        	"es":["cerrar",	"shut"]
+        },
+        {
+            "id": "make",
+            "en": ["make", "do"],
+            "es": ["hacer"]
+        },
+        {
+            "id": "go",
+            "en": ["go"],
+            "es": ["ir"]
+        }
+    ],
 
-    
+    "color":[
+        {
+            "id": "red",
+            "en": ["red"],
+            "es": ["rojo", "roja"]
+        },
+        {
+            "id": "blue",
+            "en": ["blue"],
+            "es": ["azul"]
+        },
+        {
+            "id": "green",
+            "en": ["green"],
+            "es": ["verde"]
+        },
+        {
+            "id": "yellow",
+            "en": ["yellow"],
+            "es": ["amarillo", "amarilla"]
+        },
+        {
+            "id": "black",
+            "en": ["black"],
+            "es": ["negro", "negra"]
+        },
+        {
+            "id": "white",
+            "en": ["white"],
+            "es": ["blanco", "blanca"]
+        },
+        {
+            "id": "orange",
+            "en": ["orange"],
+            "es": ["naranja"]
+        },
+        {
+            "id": "purple",
+            "en": ["purple"],
+            "es": ["morado", "púrpura"]
+        },
+        {
+            "id": "brown",
+            "en": ["brown"],
+            "es": ["marrón"]
+        },
+        {
+            "id": "pink",
+            "en": ["pink"],
+            "es": ["rosa", "rosado", "rosada"]
+        }
+    ],
+    "adjective":[
+        {
+            "id": "big",
+            "en": ["big", "large"],
+            "es": ["grande"]
+        },
+        {
+            "id": "small",
+            "en": ["small", "little"],
+            "es": ["pequeño", "pequeña"]
+        },
+        {
+            "id": "happy",
+            "en": ["happy", "glad"],
+            "es": ["feliz"]
+        },
+        {
+            "id": "content",
+            "en": ["content"],
+            "es": ["contento", "contenta"]
+        },
+        {
+            "id": "sad",
+            "en": ["sad", "unhappy"],
+            "es": ["triste"]
+        },
+        {
+            "id": "good",
+            "en": ["good"],
+            "es": ["bueno", "buena"]
+        },
+        {
+            "id": "bad",
+            "en": ["bad"],
+            "es": ["malo", "mala"]
+        },
+        {
+            "id": "hot",
+            "en": ["hot"],
+            "es": ["caliente"]
+        },
+        {
+            "id": "cold",
+            "en": ["cold"],
+            "es": ["frío", "fría"]
+        },
+        {
+            "id": "new",
+            "en": ["new"],
+            "es": ["nuevo", "nueva"]
+        },
+        {
+            "id": "old",
+            "en": ["old"],
+            "es": ["viejo", "vieja"]
+        }
+    ],
+    "adverb":[
+        {
+            "id": "quickly",
+            "en": ["quickly", "fast"],
+            "es": ["rápidamente", "de prisa"]
+        },
+        {
+            "id": "slowly",
+            "en": ["slowly"],
+            "es": ["lentamente", "despacio"]
+        },
+        {
+            "id": "well",
+            "en": ["well"],
+            "es": ["bien"]
+        },
+        {
+            "id": "badly",
+            "en": ["badly", "poorly"],
+            "es": ["mal", "malamente"]
+        },
+        {
+            "id": "very",
+            "en": ["very"],
+            "es": ["muy"]
+        },
+        {
+            "id": "now",
+            "en": ["now"],
+            "es": ["ahora"]
+        },
+        {
+            "id": "yesterday",
+            "en": ["yesterday"],
+            "es": ["ayer"]
+        },
+        {
+            "id": "tomorrow",
+            "en": ["tomorrow"],
+            "es": ["mañana"]
+        },
+        {
+            "id": "always",
+            "en": ["always"],
+            "es": ["siempre"]
+        },
+        {
+            "id": "never",
+            "en": ["never"],
+            "es": ["nunca"]
+        }
+    ]
 }
