@@ -6,7 +6,8 @@ const app = express();
 const port = 5001;
 const cors = require('cors')
 
-app.use(cors());
+// Middleware Setup
+app.use(cors());          // Allows requests from different origins
 app.use(express.json());
 
 
@@ -14,3 +15,7 @@ app.use(express.json());
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`);
 });
+
+// Register game routes
+const gameRoutes = require('./routes/gameRoutes');
+app.use('/api/games', gameRoutes);
