@@ -1,5 +1,5 @@
 .footer {
-    background-color: #ACCD7B;
+    background-color: #6DBA76;
     padding: 1rem;
     text-align: left;
     color: black;
@@ -9,22 +9,81 @@
     gap: 1px;
   }
 
-.footer div {
-  flex: .3;
+
+
+.footer > div {
+  flex: 1;
 }
 
+.topOfFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.footerTitle h3 {
+  margin: 0;
+}
+.footerTop{
+  font-size: 16px;
+  color: #0E668B;
+}
+
+.footerTitle{
+  font-size: 60px;
+  color: #0E668B;
+}
+
+
 .footerImage {
-  width: 200px;
+  width: 400px;
   height: auto;
 }
 
 .jcuLink {
   display: block;
-  padding: 10px;
+  padding: 2px;
   color: #0E668B;
 }
 
 .socialLink {
   padding-right: 15px;
   color: #0E668B;
+}
+
+.socialIcon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  padding-right:15px;
+  
+}
+
+.socialIcons {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.socialSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;   /* aligns text + icons to the right */
+  text-align: right;
+}
+
+.socialText{
+  font-size: 30px;
+  color: #0E668B;
+}
+.footer {
+  background-color: #6DBA76;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;  /* pushes left + right apart */
+  align-items: flex-start;
+}
+.copyright{
+  font-size: 14px;
+  
 }

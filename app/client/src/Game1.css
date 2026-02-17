@@ -33,4 +33,25 @@
     background-color: #d1eaff;
     transition: background-color 0.3s ease;
   }
+
+  .game1StartButton button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 25px;
+    background-color: #007bff; 
+    color: white; 
+    text-align: center; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    font-size: 1.2rem;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+
+  .game1StartButton button:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  }
   

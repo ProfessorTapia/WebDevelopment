@@ -1,0 +1,94 @@
+.game1PlayContainer {
+  font-family: 'Arial', sans-serif;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+}
+
+.gameHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #0056b3;
+}
+
+.gameHeader h2 {
+  font-size: 2rem;
+  color: #0056b3;
+  margin: 0;
+}
+
+.gameScore {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0056b3;
+}
+
+.gameWindow {
+  flex: 1;
+  background-color: #f0f8ff;
+  border: 2px solid #0056b3;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.inputArea {
+  display: flex;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.inputArea input {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 18px;
+  border: 2px solid #0056b3;
+  border-radius: 4px 0 0 4px;
+}
+
+.inputArea button {
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.inputArea button:hover {
+  background-color: #004494;
+}
+
+/* For the falling words animation (will be added dynamically) */
+.fallingWord {
+  position: absolute;
+  font-size: 1.5rem;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 5px 10px;
+  border-radius: 4px;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fall {
+  from {
+    top: 0;
+  }
+  to {
+    top: calc(100% - 40px);
+  }
+}
