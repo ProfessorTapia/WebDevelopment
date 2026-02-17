@@ -2,7 +2,7 @@ import React from 'react';
 import './Footer.css';
 import jcu_logo from './assets/jcu_logo.png';
 
-// Social media icons (replace with your own image paths)
+// Social media icons
 import facebookIcon from './assets/facebook.png';
 import linkedinIcon from './assets/linkedin.png';
 import tiktokIcon from './assets/tiktok.png';
@@ -10,19 +10,26 @@ import xIcon from './assets/x.png';
 import instagramIcon from './assets/instagram.png';
 import youtubeIcon from './assets/youtube.png';
 
+
 function Footer() {
   return (
     <footer className="footer">
-      <div className="footerTop">
-        <img src={jcu_logo} alt="John Carroll University logo" className="footerImage" />
-        <a href="https://www.jcu.edu/" target="_blank" rel="noopener noreferrer" className="jcuLink">
-          Visit jcu.edu
-        </a>
-        <p>&copy; For inquiries, contact otapiaduenas@jcu.edu.</p>
+      <div className="topOfFooter">
+        <div className="footerTitle">
+          <h3>Lingo Leap<br /></h3>
+        </div>
+        <div className="footerTop">
+        
+          <a href="https://www.jcu.edu/" target="_blank" rel="noopener noreferrer" className="jcuLink">
+            <img src={jcu_logo} alt="John Carroll University logo" className="footerImage" />
+          </a>
+        </div> 
       </div>
 
       <div className="socialSection">
-        <h3>Stay Connected with JCU</h3>
+        <div className="socialText">
+          <h3>Stay Connected with JCU</h3>
+        </div>
         <div className="socialIcons">
           <a href="https://www.facebook.com/JCU1886" target="_blank" rel="noopener noreferrer">
             <img src={facebookIcon} alt="Facebook" className="socialIcon" />
@@ -48,6 +55,10 @@ function Footer() {
             <img src={youtubeIcon} alt="YouTube" className="socialIcon" />
           </a>
         </div>
+          <p className="copyright">
+            &copy; For inquiries, contact otapiaduenas@jcu.edu.
+          </p>
+        
       </div>
     </footer>
   );
