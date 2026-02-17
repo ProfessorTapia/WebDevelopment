@@ -1,133 +1,174 @@
 const { translateText } = require("../services/translationService");
 const wordData = require("../data/translation_dictionary.json");
 const {
-  getRandWords,
-  getRandCategories,
-  checkTranslation,
+  fillTemplate,
+  chooseTemplate,
+  checkWordInGroup,
 } = require("../utils/game1Functions");
+const { ok } = require("assert");
 
-// Optional fallback if translation API fails
-async function fallbackTranslateText(word) {
-  return word;
-}
-
-// To get correct answer from dictionary
-function getCorrectAnswer(language, word, category) {
-  try {
-    const entry = wordData[language][category][word];
-    if (Array.isArray(entry) && entry.length > 0) return entry[0];
-    return null;
-  } catch {
-    return null;
-  }
-}
+const TEMPLATE_CATEGORIES = [
+  "animal",
+  "verb",
+  "food_and_drink",
+  "color",
+  "adjective",
+  "family",
+  "body_part",
+  "clothing",
+  "building",
+  "weather",
+];
 
 // Start Game 1
 const startGame1 = async (req, res) => {
   try {
-    const { language = "en", count = 10 } = req.query;
-    const promptLang = language === "en" ? "spanish" : "english";
+    const { language = "en" } = req.query;
 
-    const randomCategories = getRandCategories(promptLang, 1);
-    const selectedCategory = randomCategories[0];
-
-    const prompts = getRandWords(promptLang, Number(count), selectedCategory);
-
-    // Build the answer key using the json dictionary
-    let key = [];
-    for (const word of prompts) {
-      try {
-        const dictEntry = wordData[promptLang][selectedCategory][word];
-        if (Array.isArray(dictEntry) && dictEntry.length > 0) {
-          key.push(dictEntry[0]); // first translation in the list
-        } else {
-          // fallback to translation API if not found
-          const translated = await translateText(
-            word,
-            language === "en" ? "en" : "es",
-            "auto"
-          );
-          key.push(translated);
-        }
-      } catch {
-        const translated = await fallbackTranslateText(word);
-        key.push(translated);
-      }
-    }
-    res.json({
+    return res.json({
       meta: {
         uiLanguage: language,
-        promptingLanguage: promptLang,
-        category: selectedCategory,
-        total: prompts.length,
+        totalCategories: TEMPLATE_CATEGORIES.length,
       },
-      prompts,
-      key,
+      categories: TEMPLATE_CATEGORIES.map((id) => ({
+        id,
+        label: id.replaceAll("_", " "),
+      })),
     });
   } catch (error) {
-    console.error("Error in startGame:", error);
-    res
+    console.error("Error in startGame1:", error);
+    return res
       .status(500)
       .json({ message: "Error starting game", error: error.message });
   }
 };
 
-// Submit Answers for Game 1
-const submitAnswersGame1 = async (req, res) => {
+// Validates words belong in categories (in the opposite language) and returns a filled template story
+const generateStoryGame1 = async (req, res) => {
   try {
-    const { language = "en", category, responses } = req.body;
-    const promptLang = language === "en" ? "spanish" : "english";
+    const { language = "en", responses } = req.body;
+    const templateKey = language === "en" ? "template_en" : "template_es";
+    const answerLang = language === "en" ? "es" : "en";
 
-    // Normalize category names, makes integration with frontend easier
-    const categoryMap = {
-      animal: "animales",
-      family: "familia",
-      weather: "clima",
-      building: "edificios",
-      furniture: "muebles",
-      clothing: "ropa",
-      food_and_drink: "comida_y_bebida",
-      body_part: "partes_del_cuerpo",
-      verb: "verbo",
-      color: "color",
-      adjective: "adjetiva",
-      adverb: "adverbio",
-    };
-
-    const normalizedCategory = categoryMap[category] || category; // use map if exists, otherwise same value
-
-    let results = [];
-    let correctCount = 0;
-
-    for (const { prompt, answer } of responses) {
-      const isCorrect = checkTranslation(promptLang, prompt, answer, normalizedCategory);
-
-      results.push({
-        prompt,
-        userAnswer: answer,
-        isCorrect,
-        correctAnswer: isCorrect
-          ? answer
-          : getCorrectAnswer(promptLang, prompt, normalizedCategory),
-      });
-
-      if (isCorrect) correctCount++;
+    if (!Array.isArray(responses) || responses.length === 0) {
+      return res
+        .status(400)
+        .json({ message: "Bad request: responses must be a non-empty array" });
     }
 
-    const score = ((correctCount / responses.length) * 100).toFixed(0);
+    const errors = [];
+    const wordsMap = {};
+    const availableCategories = [];
 
-    res.json({
-      total: responses.length,
-      correct: correctCount,
-      score: `${score}%`,
-      results,
+    for (const item of responses) {
+      const category = item?.category;
+      const word = item?.word;
+
+      if (!category || typeof category !== "string") {
+        errors.push({
+          categoryId: category ?? null,
+          code: "MISSING_CATEGORY",
+          message: "Each response must include a valid category string",
+        });
+        continue;
+      }
+
+      if (!word || typeof word !== "string" || word.trim().length === 0) {
+        errors.push({
+          categoryId: category,
+          code: "MISSING_WORD",
+          message: "Each response must include a non-empty word string",
+        });
+        continue;
+      }
+
+      if (!TEMPLATE_CATEGORIES.includes(category)) {
+        errors.push({
+          categoryId: category,
+          code: "UKNOWN_CATEGORY",
+          message: `Unknow category "${category}".`,
+        });
+        continue;
+      }
+
+      if (wordsMap[category]) {
+        errors.push({
+          categoryId: category,
+          code: "DUPLICATE_CATEGORY",
+          message: "Duplicate category provided",
+        });
+      }
+
+      const normalizedWord = word.trim().toLowerCase();
+
+      const isValid = checkWordInGroup(answerLang, normalizedWord, category);
+      if (!isValid) {
+        errors.push({
+          categoryId: category,
+          code: "NOT_IN_CATEGORY",
+          message: `"${word}" doesn't look like it fits the "${category}" category.`,
+        });
+        continue;
+      }
+
+      wordsMap[category] = normalizedWord;
+      availableCategories.push(category);
+    }
+
+    if (errors.length > 0) {
+      return res.json({ ok: false, errors });
+    }
+
+    const missing = TEMPLATE_CATEGORIES.filter((c) => !(c in wordsMap));
+    if (missing.length > 0) {
+      return res.json({
+        ok: false,
+        errors: missing.map((c) => ({
+          categoryId: c,
+          code: "MISSING_REQUIRED_CATEGORY",
+          message: `Missing a word for a required category: "${c}"`,
+        })),
+      });
+    }
+
+    let template;
+    try {
+      template = chooseTemplate(availableCategories);
+    } catch (e) {
+      return res.json({
+        ok: false,
+        errors: [{ code: "NO_TEMPLATE", message: e.message }],
+      });
+    }
+
+    const templateStr = template[templateKey];
+
+    let storyText;
+    try {
+      storyText = fillTemplate(templateStr, wordsMap);
+    } catch (e) {
+      return res.json({
+        ok: false,
+        errors: [{ code: "TEMPLATE_FILL_ERROR", message: e.message }],
+      });
+    }
+
+    return res.json({
+      ok: true,
+      story: { text: storyText },
+      meta: {
+        uiLanguage: language,
+        answerLanguage: answerLang,
+        templateId: template.id,
+        categories: template.categories,
+      },
     });
   } catch (error) {
-    console.error("Error in submitAnswers:", error);
-    res
+    console.error("Error in generateStoryGame1:", error);
+    return res
       .status(500)
-      .json({ message: "Error checking answers", error: error.message });
+      .json({ message: "Error generating story", error: error.message });
   }
 };
 
-module.exports = { startGame1, submitAnswersGame1 };
+module.exports = { startGame1, generateStoryGame1 };

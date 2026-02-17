@@ -8,36 +8,29 @@ function shuffleInPlace(arr) {
   }
 }
 
-//getWord
-function getRandWords(language, num = 1, category = null) {
-  let possibleWords;
-  let words;
-
-  // get possible words either the whole dictionary or just 1 category
-  if (category) {
-    try {
-      possibleWords = Object.keys(transDict[language][category]);
-    } catch {
-      console.log("invalide language or category");
-    }
-  } else {
-    possibleWords = Object.values(transDict[language]).flatMap((Obj) =>
-      Object.keys(Obj),
-    );
-  }
-
-  // get random sample of words from possible words
-  shuffleInPlace(possibleWords);
+// get random sample of words from possible words
+function shuffleInPlace(possibleWords, num) {
   words = possibleWords.slice(0, num);
   return words;
 }
 
+//getWord
+function getRandWords(category, num = 1, lang = "en") {
+  const entries = transDict?.[category];
+  if (!Array.isArray(entries)) return [];
+
+  // Collect possible words from that category in that lang
+  const possibleWords = entries.flatMap((entry) => entry?.[lang] ?? []);
+  shuffleInPlace(possibleWords);
+
+  return possibleWords.slice(0, num);
+}
+
 //getCategory
-function getRandCategories(language, num = 1) {
-  const possibleCategories = Object.keys(transDict[language]);
+function getRandCategories(num = 1) {
+  const possibleCategories = Object.keys(transDict);
   shuffleInPlace(possibleCategories);
-  const randCategories = possibleCategories.slice(0, num);
-  return randCategories;
+  return possibleCategories.slice(0, num);
 }
 
 //checkTranslation
@@ -52,12 +45,25 @@ function checkTranslation(language, word, translation, category = null) {
   }
 }
 
-//checkWordInGroup
-function checkWordInGroup(language, word, category) {
-  const possibleWords = Object.values(transDict[language][category]).flat();
-  return possibleWords.includes(word);
+function normalizeWord(s) {
+  return String(s ?? "")
+    .trim()
+    .toLowerCase();
 }
 
+// lang should be "en" or "es"
+function checkWordInGroup(lang, word, category) {
+  const normalized = normalizeWord(word);
+
+  const entries = transDict?.[category];
+  if (!Array.isArray(entries)) return false;
+
+  return entries.some((entry) => {
+    const list = entry?.[lang];
+    if (!Array.isArray(list)) return false;
+    return list.some((w) => normalizeWord(w) === normalized);
+  });
+}
 /**
  * Pick a template that matches the required categories.
  *
