@@ -8,41 +8,11 @@ function shuffleInPlace(arr) {
   }
 }
 
-// get random sample of words from possible words
-function shuffleInPlace(possibleWords, num) {
-  words = possibleWords.slice(0, num);
-  return words;
-}
-
-//getWord
-function getRandWords(category, num = 1, lang = "en") {
-  const entries = transDict?.[category];
-  if (!Array.isArray(entries)) return [];
-
-  // Collect possible words from that category in that lang
-  const possibleWords = entries.flatMap((entry) => entry?.[lang] ?? []);
-  shuffleInPlace(possibleWords);
-
-  return possibleWords.slice(0, num);
-}
-
 //getCategory
 function getRandCategories(num = 1) {
   const possibleCategories = Object.keys(transDict);
   shuffleInPlace(possibleCategories);
   return possibleCategories.slice(0, num);
-}
-
-//checkTranslation
-function checkTranslation(language, word, translation, category = null) {
-  if (category) {
-    return transDict[language][category][word].includes(translation);
-  }
-  for (const category of Object.values(transDict[language])) {
-    if (Object.keys(category).includes(word)) {
-      return category[word].includes(translation.toLowerCase());
-    }
-  }
 }
 
 function normalizeWord(s) {
@@ -111,11 +81,46 @@ function fillTemplate(templateStr, wordsMap) {
   return story;
 }
 
+function fillTemplateWithParts(templateStr, wordsMap) {
+  const parts = [];
+  const regex = /\{(\w+)\}/g;
+
+  let lastIndex = 0;
+  let match;
+
+  while ((match = regex.exec(templateStr)) !== null) {
+    const start = match.index;
+    const end = regex.lastIndex;
+    const category = match[1];
+
+    // push text before placeholder
+    if (start > lastIndex) {
+      parts.push({ type: "text", value: templateStr.slice(lastIndex, start) });
+    }
+
+    if (!(category in wordsMap)) {
+      throw new Error(`Missing word for category: ${category}`);
+    }
+
+    // push the inserted word as a special part
+    parts.push({ type: "fill", category, value: wordsMap[category] });
+
+    lastIndex = end;
+  }
+
+  // push trailing text
+  if (lastIndex < templateStr.length) {
+    parts.push({ type: "text", value: templateStr.slice(lastIndex) });
+  }
+
+  const text = parts.map(p => p.value).join("");
+  return { text, parts };
+}
+
 module.exports = {
-  getRandWords,
   getRandCategories,
-  checkTranslation,
   checkWordInGroup,
   chooseTemplate,
   fillTemplate,
+  fillTemplateWithParts,
 }; // export the function

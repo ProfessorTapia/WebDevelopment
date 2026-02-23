@@ -4,8 +4,10 @@ const {
   fillTemplate,
   chooseTemplate,
   checkWordInGroup,
+  fillTemplateWithParts,
 } = require("../utils/game1Functions");
 const { ok } = require("assert");
+const { text } = require("stream/consumers");
 
 const TEMPLATE_CATEGORIES = [
   "animal",
@@ -47,8 +49,9 @@ const startGame1 = async (req, res) => {
 const generateStoryGame1 = async (req, res) => {
   try {
     const { language = "en", responses } = req.body;
-    const templateKey = language === "en" ? "template_en" : "template_es";
+    const templateKeyMixed = language === "en" ? "template_en" : "template_es";
     const answerLang = language === "en" ? "es" : "en";
+    const templateKeyImmersion = answerLang === "en" ? "template_en" : "template_es";
 
     if (!Array.isArray(responses) || responses.length === 0) {
       return res
@@ -85,8 +88,8 @@ const generateStoryGame1 = async (req, res) => {
       if (!TEMPLATE_CATEGORIES.includes(category)) {
         errors.push({
           categoryId: category,
-          code: "UKNOWN_CATEGORY",
-          message: `Unknow category "${category}".`,
+          code: "UNKNOWN_CATEGORY",
+          message: `Unknown category "${category}".`,
         });
         continue;
       }
@@ -97,6 +100,7 @@ const generateStoryGame1 = async (req, res) => {
           code: "DUPLICATE_CATEGORY",
           message: "Duplicate category provided",
         });
+        continue;
       }
 
       const normalizedWord = word.trim().toLowerCase();
@@ -141,21 +145,42 @@ const generateStoryGame1 = async (req, res) => {
       });
     }
 
-    const templateStr = template[templateKey];
+    const templateStrMixed = template[templateKeyMixed];
+    const templateStrImmersion = template[templateKeyImmersion];
 
-    let storyText;
+    let mixedText;
     try {
-      storyText = fillTemplate(templateStr, wordsMap);
+      mixedText = fillTemplate(templateStrMixed, wordsMap);
     } catch (e) {
       return res.json({
         ok: false,
         errors: [{ code: "TEMPLATE_FILL_ERROR", message: e.message }],
-      });
+      })
+    }
+
+    let immersion;
+    try {
+      immersion = fillTemplateWithParts(templateStrImmersion, wordsMap);
+    } catch (e) {
+      return res.json({
+        ok: false,
+        errors: [{ code: "TEMPLATE_FILL_ERROR", message: e.message }],
+      })
     }
 
     return res.json({
       ok: true,
-      story: { text: storyText },
+      stories: {
+        mixed: {
+          language,
+          text: mixedText,
+        },
+        immersion: {
+          language: answerLang,
+          text: immersion.text,
+          parts: immersion.parts,
+        }
+      },
       meta: {
         uiLanguage: language,
         answerLanguage: answerLang,
