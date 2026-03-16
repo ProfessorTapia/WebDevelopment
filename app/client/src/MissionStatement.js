@@ -7,8 +7,10 @@ import yoni from './assets/sabagHeadshot.webp';
 import riley from './assets/mcgintyHeadshot.jpg';
 import tad from './assets/salwanHeadshot.jpeg';
 import thomas from './assets/richardsonHeadshot.jpeg';
-
+import { useLanguage } from './LanguageContext';
+import text from './data.json'
 function MissionStatement() {
+    const { currentLanguage, toggleLanguage, setCurrentLanguage } = useLanguage(); 
     return(
         <div className="missionStatementPage">
             <h1>Mission Statement</h1>
@@ -52,9 +54,8 @@ function MissionStatement() {
             <ul>
                 <li>
                     <img src={sophia} alt="Sophia Colonello" className="missionStatementPhotos" />
-                    <p><strong>Sophia Colonello</strong> is a senior Computer Science major and Data Science minor at John Carroll Unviersity. She has been a TA/Grader for the MCDS Department the past four years, been involved
-                    in the COMAP Math Modeling Competition for two years, and was involved in undergraduate research of The Mechanisms of Weight Transformations in Black Box Neural Networks her senior year. Her professional experience within software development as an Applied Technology Intern at PGT Trucking Inc.,
-                    and data analytics experience as a Data Analyst Intern at MSA Safety has provided a variety of technical learning opportunities. She has experience with languages such as Java, JavaScript/Typescript, Python, and SQL, and other technologies such as GitHub, Copilot, Postman, and Power BI.</p>
+                    <p><strong>Sophia Cononello </strong>{text[currentLanguage].missionPage.sophia}</p>
+
                 </li>
                 <li>
                     <img src={yoni} alt="Yoni Sabag" className="missionStatementPhotos" />
@@ -62,8 +63,7 @@ function MissionStatement() {
                 </li>
                 <li>
                     <img src={riley} alt="Riley McGinty" className="missionStatementPhotos" />
-                    <p><strong>Riley McGinty</strong> is a second year Computer Science major, with a minor in Economics, at John Carroll University. He has expereince in programming
-                    with Python, Java, Javascript, and SQL. He is a Resident Assitant and Student Worker at JCU, as well as being involved in multiple organizations.</p>
+                    <p><strong>Riley McGinty</strong> {text[currentLanguage].missionPage.riley}</p>
                 </li>
             </ul>
         </div>

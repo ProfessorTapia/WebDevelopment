@@ -8,56 +8,32 @@ function shuffleInPlace(arr) {
   }
 }
 
-//getWord
-function getRandWords(language, num = 1, category = null) {
-  let possibleWords;
-  let words;
-
-  // get possible words either the whole dictionary or just 1 category
-  if (category) {
-    try {
-      possibleWords = Object.keys(transDict[language][category]);
-    } catch {
-      console.log("invalide language or category");
-    }
-  } else {
-    possibleWords = Object.values(transDict[language]).flatMap((Obj) =>
-      Object.keys(Obj),
-    );
-  }
-
-  // get random sample of words from possible words
-  shuffleInPlace(possibleWords);
-  words = possibleWords.slice(0, num);
-  return words;
-}
-
 //getCategory
-function getRandCategories(language, num = 1) {
-  const possibleCategories = Object.keys(transDict[language]);
+function getRandCategories(num = 1) {
+  const possibleCategories = Object.keys(transDict);
   shuffleInPlace(possibleCategories);
-  const randCategories = possibleCategories.slice(0, num);
-  return randCategories;
+  return possibleCategories.slice(0, num);
 }
 
-//checkTranslation
-function checkTranslation(language, word, translation, category = null) {
-  if (category) {
-    return transDict[language][category][word].includes(translation);
-  }
-  for (const category of Object.values(transDict[language])) {
-    if (Object.keys(category).includes(word)) {
-      return category[word].includes(translation.toLowerCase());
-    }
-  }
+function normalizeWord(s) {
+  return String(s ?? "")
+    .trim()
+    .toLowerCase();
 }
 
-//checkWordInGroup
-function checkWordInGroup(language, word, category) {
-  const possibleWords = Object.values(transDict[language][category]).flat();
-  return possibleWords.includes(word);
-}
+// lang should be "en" or "es"
+function checkWordInGroup(lang, word, category) {
+  const normalized = normalizeWord(word);
 
+  const entries = transDict?.[category];
+  if (!Array.isArray(entries)) return false;
+
+  return entries.some((entry) => {
+    const list = entry?.[lang];
+    if (!Array.isArray(list)) return false;
+    return list.some((w) => normalizeWord(w) === normalized);
+  });
+}
 /**
  * Pick a template that matches the required categories.
  *
@@ -105,11 +81,46 @@ function fillTemplate(templateStr, wordsMap) {
   return story;
 }
 
+function fillTemplateWithParts(templateStr, wordsMap) {
+  const parts = [];
+  const regex = /\{(\w+)\}/g;
+
+  let lastIndex = 0;
+  let match;
+
+  while ((match = regex.exec(templateStr)) !== null) {
+    const start = match.index;
+    const end = regex.lastIndex;
+    const category = match[1];
+
+    // push text before placeholder
+    if (start > lastIndex) {
+      parts.push({ type: "text", value: templateStr.slice(lastIndex, start) });
+    }
+
+    if (!(category in wordsMap)) {
+      throw new Error(`Missing word for category: ${category}`);
+    }
+
+    // push the inserted word as a special part
+    parts.push({ type: "fill", category, value: wordsMap[category] });
+
+    lastIndex = end;
+  }
+
+  // push trailing text
+  if (lastIndex < templateStr.length) {
+    parts.push({ type: "text", value: templateStr.slice(lastIndex) });
+  }
+
+  const text = parts.map(p => p.value).join("");
+  return { text, parts };
+}
+
 module.exports = {
-  getRandWords,
   getRandCategories,
-  checkTranslation,
   checkWordInGroup,
   chooseTemplate,
   fillTemplate,
+  fillTemplateWithParts,
 }; // export the function

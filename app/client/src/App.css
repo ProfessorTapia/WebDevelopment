@@ -5,15 +5,21 @@ body, html, #root {
   font-family: 'Segoe UI', sans-serif;
   background-color: #459FDB;
   height: 100%;
+  font-size: 20px;
+  background: url('./assets/istockphoto-1891623651-612x612.jpg') no-repeat center center fixed; /* 👈 image path */
+  background-size: cover; /* makes it fill the screen */
 }
+
 
 .appContainer {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  
 }
 
 .mainContent {
   flex: 1;
   padding: 2rem;
+
 }

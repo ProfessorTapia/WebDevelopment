@@ -40,6 +40,10 @@
             "description": "Enter words that fit the category to the left. When you are complete, select “Generate” and the program will generate a fun story with the words you gave it!",
             "instructions": "For each category, type a word that fits the prompt.",
             "changeLanguage": "Spanish"
+        },
+        "missionPage":{
+            "sophia":" is a senior Computer Science major and Data Science minor at John Carroll Unviersity. She has been a TA/Grader for the MCDS Department the past four years, been involved in the COMAP Math Modeling Competition for two years, and was involved in undergraduate research of The Mechanisms of Weight Transformations in Black Box Neural Networks her senior year. Her professional experience within software development as an Applied Technology Intern at PGT Trucking Inc., and data analytics experience as a Data Analyst Intern at MSA Safety has provided a variety of technical learning opportunities. She has experience with languages such as Java, JavaScript/Typescript, Python, and SQL, and other technologies such as GitHub, Copilot, Postman, and Power BI.",
+            "riley":"is a second year Computer Science major, with a minor in Economics, at John Carroll University. He has experience in programming with Python, Java, Javascript, and SQL. He is a Resident Assistant and Student Worker at JCU, as well as being involved in multiple organizations."
         }
     },
 
@@ -84,6 +88,10 @@
             "description": "Introduzca las palabras que se ajusten a la categoría de la izquierda. Cuando hayas terminado, selecciona “Generar” y el programa generará una divertida historia con las palabras que le diste.",
             "instructions": "Para cada categoría, escriba una palabra que se ajuste a la solicitud.",
             "changeLanguage": "Inglés"
+        },
+        "missionPage":{
+            "sophia":"es estudiante de último año de Ciencias de la Computación con especialización en Ciencia de Datos en la Universidad John Carroll. Ha sido asistente de cátedra y correctora del Departamento de Ciencias de la Computación y del Sistema de Datos (MCDS) durante los últimos cuatro años, participó en la Competencia de Modelado Matemático COMAP durante dos años y, en su último año de carrera, realizó una investigación de pregrado sobre los mecanismos de transformación de pesos en redes neuronales de caja negra. Su experiencia profesional en desarrollo de software como pasante de Tecnología Aplicada en PGT Trucking Inc. y en análisis de datos como pasante de Analista de Datos en MSA Safety le ha brindado diversas oportunidades de aprendizaje técnico. Tiene experiencia con lenguajes como Java, JavaScript/TypeScript, Python y SQL, y con otras tecnologías como GitHub, Copilot, Postman y Power BI.",
+            "riley":"es estudiante de segundo año de Ciencias de la Computación, con una subespecialización en Economía, en la Universidad John Carroll. Tiene experiencia en programación con Python, Java, Javascript y SQL. Es asistente residente y estudiante trabajador en JCU, además de participar en diversas organizaciones."
         }
     }
 
