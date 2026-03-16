@@ -33,4 +33,117 @@
     background-color: #d1eaff;
     transition: background-color 0.3s ease;
   }
+
+  .game1StartButton button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 25px;
+    background-color: #007bff; 
+    color: white; 
+    text-align: center; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    font-size: 1.2rem;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+
+  .game1StartButton button:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  }
+  .page {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   
+  .rules-card {
+    background: #e6e6e6;
+    width: 700px;
+    padding: 30px;
+    border-radius: 30px;
+    text-align: center;
+  }
+  
+  .rules-card h2 {
+    margin-bottom: 15px;
+  }
+  
+  .subtitle {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .divider {
+    width: 80%;
+    margin: 30px 0;
+    border: 1px solid #e6b089;
+  }
+  
+  .game-card {
+    background: #e6e6e6;
+    width: 700px;
+    padding: 40px;
+    border-radius: 30px;
+  }
+  
+  .category-bar {
+    background: #5f8f00;
+    color: white;
+    padding: 10px 20px;
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .prompt-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .prompt-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .prompt {
+    font-size: 22px;
+  }
+  
+  .answer {
+    border: none;
+    border-bottom: 2px solid #444;
+    width: 250px;
+    font-size: 18px;
+    background: transparent;
+  }
+  
+  .answer:focus {
+    outline: none;
+  }
+  
+  .generate-btn {
+    margin-top: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 60px;
+    font-size: 28px;
+    border: none;
+    border-radius: 5px;
+    background: #f3a56a;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .generate-btn:hover {
+    background: #ea9150;
+  }
