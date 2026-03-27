@@ -3,7 +3,7 @@
 // setting up global variables for communication
 const express = require('express');
 const app = express();
-const port = 5001;
+const port = 3000;
 const cors = require('cors')
 
 // Middleware Setup

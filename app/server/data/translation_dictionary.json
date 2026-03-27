@@ -625,6 +625,11 @@
             "id": "old",
             "en": ["old"],
             "es": ["viejo", "vieja"]
+        },
+        {
+            "id": "tall",
+            "en": ["tall"],
+            "es": ["alto","alta"]
         }
     ],
     "adverb":[
