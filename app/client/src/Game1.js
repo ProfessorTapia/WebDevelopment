@@ -146,22 +146,19 @@ export default function Game1() {
         </>
       ) : (
         <div className="story-card">
-          <h2>Your Story</h2>
+  <h2>Your Story</h2>
 
-          <div className="story-block">
-            <p className="story-label">Mixed (English + Spanish)</p>
-            <p className="story-text">{story.mixed.text}</p>
-          </div>
+  <div className="story-block">
+    <p className="story-label">Full Immersion (Spanish)</p>
+    <div className="story-box">
+      <p className="story-text">{story.immersion.text}</p>
+    </div>
+  </div>
 
-          <div className="story-block">
-            <p className="story-label">Full Immersion (Spanish)</p>
-            <p className="story-text">{story.immersion.text}</p>
-          </div>
-
-          <button className="generate-btn" onClick={handleReset}>
-            Play Again
-          </button>
-        </div>
+  <button className="generate-btn" onClick={handleReset}>
+    Play Again
+  </button>
+</div>
       )}
     </div>
   );
